@@ -41,10 +41,7 @@ namespace denemebilmemmkaççç
         
         
        
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="socket5"></param>
+       
         public void genelVeriYazma(Socket socket5)
         {
             Socket handler = socket5.Accept();
@@ -60,21 +57,13 @@ namespace denemebilmemmkaççç
             textBoxatesolcer.Text = veriler[2];
             textBoxsıcaklık.Text = veriler[3];
         }
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <param name="sender"></param>
-       /// <param name="e"></param>
+       
 
         private void Arayüz_Load(object sender, EventArgs e)
         {
             timer1.Interval = 5000;
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+      
         private void button6_Click(object sender, EventArgs e)
         {
             int port = 90;
@@ -142,8 +131,8 @@ namespace denemebilmemmkaççç
             string konu = ($"Doluluk oranı:{textBoxdoluluk},Sıcaklık degeri:{textBoxsıcaklık},sigara dumanı durumu:{textBoxsigaradumanı},ateş durumu:{textBoxatesolcer}");
             sc.Credentials = new NetworkCredential("Mail Adresi", "Şifre");
             MailMessage mail = new MailMessage();
-            mail.From = new MailAddress("Mail Adress", "Şifre");
-            mail.To.Add("bugrabeder0@gmail.com");
+            mail.From = new MailAddress("Mail Adres", "Şifre");
+            mail.To.Add("Mail Adres");
             mail.Subject = "Sensor Verileri";
             mail.IsBodyHtml = true;
             mail.Body = konu;
